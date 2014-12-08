@@ -45,7 +45,6 @@ namespace Memory
 
         public bool imageHasBeenTapped = false;
         int gameTimeLeft = 60;
-        int gameTimePlayed = 0;
         bool gameFinished = false;
         public int index, lastIndex, pairCount;
         public int imagesTapped = 0;
@@ -433,7 +432,6 @@ namespace Memory
         void gameTimer_Tick(object sender, object e)
         {
             gameTimeLeft--;
-            gameTimePlayed++;
 
             outputTB.Text = gameTimeLeft.ToString();
 
@@ -460,14 +458,14 @@ namespace Memory
 
         public async void showScore()
         {
-            appManager.addGameScore(gameTimePlayed, appManager.Player);
+            appManager.addGameScore(gameTimeLeft, appManager.Player);
             // shows the top 5 scores
-            var dialog = new MessageDialog("Your Score is: " + gameTimePlayed + "\n\n" +
-                                            "Player 1: " + appManager.Name1 + " Score: " + appManager.Score1 + "\n\n" +
-                                            "Player 2: " + appManager.Name2 + " Score: " + appManager.Score2 + "\n\n" +
-                                            "Player 3: " + appManager.Name3 + " Score: " + appManager.Score3 + "\n\n" +
-                                            "Player 4: " + appManager.Name4 + " Score: " + appManager.Score4 + "\n\n" +
-                                            "Player 5: " + appManager.Name5 + " Score: " + appManager.Score5);
+            var dialog = new MessageDialog("Your Score is: " + gameTimeLeft + "\n\n" +
+                                            "1: Name: " + appManager.Name1 + "\n    Score: " + appManager.Score1 + "\n\n" +
+                                            "2: Name: " + appManager.Name2 + "\n    Score: " + appManager.Score2 + "\n\n" +
+                                            "3: Name: " + appManager.Name3 + "\n    Score: " + appManager.Score3 + "\n\n" +
+                                            "4: Name: " + appManager.Name4 + "\n    Score: " + appManager.Score4 + "\n\n" +
+                                            "5: Name: " + appManager.Name5 + "\n    Score: " + appManager.Score5);
             await dialog.ShowAsync();
 
             // saves scores to Json file

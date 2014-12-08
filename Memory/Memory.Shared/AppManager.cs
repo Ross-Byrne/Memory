@@ -29,7 +29,7 @@ namespace Memory
 
             // do stuff here
 
-            if (score < Score1)
+            if (score > Score1)
             {
                 Name5 = Name4;
                 Name4 = Name3;
@@ -43,7 +43,7 @@ namespace Memory
                 Score2 = Score1;
                 Score1 = score;
             }
-            else if (score < Score2)
+            else if (score > Score2)
             {
                 Name5 = Name4;
                 Name4 = Name3;
@@ -55,7 +55,7 @@ namespace Memory
                 Score3 = Score2;
                 Score2 = score;
             }
-            else if (score < Score3)
+            else if (score > Score3)
             {
                 Name5 = Name4;
                 Name4 = Name3;
@@ -65,7 +65,7 @@ namespace Memory
                 Score4 = Score3;
                 Score3 = score;
             }
-            else if (score < Score4)
+            else if (score > Score4)
             {
                 Name5 = Name4;
                 Name4 = name;
@@ -73,7 +73,7 @@ namespace Memory
                 Score5 = Score4;
                 Score4 = score;
             }
-            else if (score < Score5)
+            else if (score > Score5)
             {
                 Score5 = score;
                 Name5 = name;
