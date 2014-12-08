@@ -28,10 +28,6 @@ namespace Memory
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
-        Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
-
-        string gameMode = "Normal"; // default value
-
         public MainPage()
         {
             this.InitializeComponent();
@@ -71,18 +67,6 @@ namespace Memory
         /// session.  The state will be null the first time a page is visited.</param>
         private void NavigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            if (localSettings.Values.ContainsKey("GameMode"))
-            {
-                gameMode = localSettings.Values["GameMode"].ToString();
-            }
-
-            // gets game mode when navigating to page
-            string value = e.NavigationParameter as string;
-
-            if (!string.IsNullOrWhiteSpace(value))
-            {
-                gameMode = value;
-            }
         }
 
         /// <summary>
@@ -95,8 +79,6 @@ namespace Memory
         /// serializable state.</param>
         private void NavigationHelper_SaveState(object sender, SaveStateEventArgs e)
         {
-            // save current settings
-            localSettings.Values["GameMode"] = gameMode;
         }
 
         #region NavigationHelper registration
@@ -128,12 +110,12 @@ namespace Memory
 
         private void playBT_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(GamePage), gameMode);
+            Frame.Navigate(typeof(GamePage));
         }
 
         private void settingsBT_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(SettingsPage), gameMode);
+            Frame.Navigate(typeof(SettingsPage));
         }
     }
 }

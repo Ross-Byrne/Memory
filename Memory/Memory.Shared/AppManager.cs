@@ -4,9 +4,11 @@ using System.Text;
 
 namespace Memory
 {
-    public class ScoreManager
+    public class AppManager
     {
         public string Player { get; set; }
+
+        public string GameMode { get; set; }
 
         public string Name1 { get; set; }
         public string Name2 { get; set; }

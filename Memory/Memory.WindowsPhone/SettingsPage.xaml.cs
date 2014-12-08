@@ -32,13 +32,9 @@ namespace Memory
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
-        Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+        AppManager appManager = new AppManager();
 
-        ScoreManager scoreManager = new ScoreManager();
-
-        private const string JSONFILENAME = "ScoreData.json";
-
-        string gameMode;
+        private const string JSONFILENAME = "AppData.json";
 
         public SettingsPage()
         {
@@ -47,6 +43,9 @@ namespace Memory
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
+
+            appManager.Player = "Player";
+            appManager.GameMode = "Normal";
         }
 
         /// <summary>
@@ -79,33 +78,6 @@ namespace Memory
         /// session.  The state will be null the first time a page is visited.</param>
         private async void NavigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            if (localSettings.Values.ContainsKey("GameMode"))
-            {
-                gameMode = localSettings.Values["GameMode"].ToString();
-            }
-
-            // gets game mode when navigating to page
-            string value = e.NavigationParameter as string;
-
-            if (!string.IsNullOrWhiteSpace(value))
-            {
-                gameMode = value;
-            }
-
-            // load selected game mode into radio buttons
-            if (gameMode == "Normal")
-            {
-                myFirstRadioButton.IsChecked = true;
-            }
-            else if (gameMode == "EasyNumberSymbol")
-            {
-                mySecondRadioButton.IsChecked = true;
-            }
-            else if (gameMode == "HardNumberSymbol")
-            {
-                myThirdRadioButton.IsChecked = true;
-            } // if else
-
             // load the score from Json file
             try
             {
@@ -116,9 +88,22 @@ namespace Memory
 
             }
 
-            // keeps the players name updated
-            playerNameTBX.Text = scoreManager.Player;
+            // load selected game mode into radio buttons
+            if (appManager.GameMode == "Normal")
+            {
+                myFirstRadioButton.IsChecked = true;
+            }
+            else if (appManager.GameMode == "EasyNumberSymbol")
+            {
+                mySecondRadioButton.IsChecked = true;
+            }
+            else if (appManager.GameMode == "HardNumberSymbol")
+            {
+                myThirdRadioButton.IsChecked = true;
+            } // if else
 
+            // keeps the players name updated
+            playerNameTBX.Text = appManager.Player;
         }
 
         /// <summary>
@@ -131,8 +116,6 @@ namespace Memory
         /// serializable state.</param>
         private async void NavigationHelper_SaveState(object sender, SaveStateEventArgs e)
         {
-            localSettings.Values["GameMode"] = gameMode;
-
             // saves scores to Json file
             await writeJsonAsync();
         }
@@ -168,35 +151,35 @@ namespace Memory
         {
             if (myFirstRadioButton.IsChecked == true)
             {
-                gameMode = "Normal";
+                appManager.GameMode = "Normal";
             }
             else if (mySecondRadioButton.IsChecked == true)
             {
-                gameMode = "EasyNumberSymbol";
+                appManager.GameMode = "EasyNumberSymbol";
             }
             else if (myThirdRadioButton.IsChecked == true)
             {
-                gameMode = "HardNumberSymbol";
+                appManager.GameMode = "HardNumberSymbol";
             } // if else
 
-            Frame.Navigate(typeof(MainPage), gameMode);
+            Frame.Navigate(typeof(MainPage));
 
         } // saveGameModeBt_Tapped()
 
         private async void topScoreBt_Tapped(object sender, TappedRoutedEventArgs e)
         {
             // shows the top 5 scores
-            var dialog = new MessageDialog("1: Name: " + scoreManager.Name1 + "\n    Score: " + scoreManager.Score1 + "\n\n" +
-                                            "2: Name: " + scoreManager.Name2 + "\n    Score: " + scoreManager.Score2 + "\n\n" +
-                                            "3: Name: " + scoreManager.Name3 + "\n    Score: " + scoreManager.Score3 + "\n\n" +
-                                            "4: Name: " + scoreManager.Name4 + "\n    Score: " + scoreManager.Score4 + "\n\n" +
-                                            "5: Name: " + scoreManager.Name5 + "\n    Score: " + scoreManager.Score5);
+            var dialog = new MessageDialog("1: Name: " + appManager.Name1 + "\n    Score: " + appManager.Score1 + "\n\n" +
+                                            "2: Name: " + appManager.Name2 + "\n    Score: " + appManager.Score2 + "\n\n" +
+                                            "3: Name: " + appManager.Name3 + "\n    Score: " + appManager.Score3 + "\n\n" +
+                                            "4: Name: " + appManager.Name4 + "\n    Score: " + appManager.Score4 + "\n\n" +
+                                            "5: Name: " + appManager.Name5 + "\n    Score: " + appManager.Score5);
             await dialog.ShowAsync();
         } // // topScoreBt_Tapped()
 
         private void playerNameTBX_TextChanged(object sender, TextChangedEventArgs e)
         {
-            scoreManager.Player = playerNameTBX.Text;
+            appManager.Player = playerNameTBX.Text;
         } // playerNameTBX_TextChanged()
 
         private void playerNameTBX_GotFocus(object sender, RoutedEventArgs e)
@@ -206,39 +189,38 @@ namespace Memory
 
         private async Task writeJsonAsync()
         {
-            var serializer = new DataContractJsonSerializer(typeof(ScoreManager));
+            var serializer = new DataContractJsonSerializer(typeof(AppManager));
             using (var stream = await ApplicationData.Current.LocalFolder.OpenStreamForWriteAsync(
                                 JSONFILENAME,
                                 CreationCollisionOption.ReplaceExisting))
             {
-                serializer.WriteObject(stream, scoreManager);
+                serializer.WriteObject(stream, appManager);
             }
 
         } // writeJsonAsync()
 
         private async Task deserializeJsonAsync()
         {
-            string content = String.Empty;
-
-            ScoreManager theScore;
-            var jsonSerializer = new DataContractJsonSerializer(typeof(ScoreManager));
+            AppManager theManager;
+            var jsonSerializer = new DataContractJsonSerializer(typeof(AppManager));
 
             var myStream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(JSONFILENAME);
 
-            theScore = (ScoreManager)jsonSerializer.ReadObject(myStream);
+            theManager = (AppManager)jsonSerializer.ReadObject(myStream);
 
-            scoreManager.Player = theScore.Player;
+            appManager.Player = theManager.Player;
+            appManager.GameMode = theManager.GameMode;
 
-            scoreManager.Name1 = theScore.Name1;
-            scoreManager.Score1 = theScore.Score1;
-            scoreManager.Name2 = theScore.Name2;
-            scoreManager.Score2 = theScore.Score2;
-            scoreManager.Name3 = theScore.Name3;
-            scoreManager.Score3 = theScore.Score3;
-            scoreManager.Name4 = theScore.Name4;
-            scoreManager.Score4 = theScore.Score4;
-            scoreManager.Name5 = theScore.Name5;
-            scoreManager.Score5 = theScore.Score5;
+            appManager.Name1 = theManager.Name1;
+            appManager.Score1 = theManager.Score1;
+            appManager.Name2 = theManager.Name2;
+            appManager.Score2 = theManager.Score2;
+            appManager.Name3 = theManager.Name3;
+            appManager.Score3 = theManager.Score3;
+            appManager.Name4 = theManager.Name4;
+            appManager.Score4 = theManager.Score4;
+            appManager.Name5 = theManager.Name5;
+            appManager.Score5 = theManager.Score5;
         } // deserializeJsonAsync()
     }
 }

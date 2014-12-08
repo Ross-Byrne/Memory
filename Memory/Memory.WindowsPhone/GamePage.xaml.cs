@@ -33,9 +33,9 @@ namespace Memory
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
-        private const string JSONFILENAME = "ScoreData.json";
+        private const string JSONFILENAME = "AppData.json";
 
-        public ScoreManager scoreManager = new ScoreManager();
+        public AppManager appManager = new AppManager();
 
         // My random
         Random random = new Random();
@@ -57,7 +57,6 @@ namespace Memory
         // to keep track of the last image that was tapped
         public List<GameImage> lastTappedImages = new List<GameImage>();
 
-        string gameMode;
         public string questionMark = "Assets/question_mark.png";
         public int[] imageRecord = new int[6];
 
@@ -122,7 +121,8 @@ namespace Memory
 
             headingTB.Text = "Time Left: ";
             outputTB.Text = "60";
-            scoreManager.Player = "Player";
+            appManager.Player = "Player";
+            appManager.GameMode = "Normal";
         }
 
         /// <summary>
@@ -155,12 +155,14 @@ namespace Memory
         /// session.  The state will be null the first time a page is visited.</param>
         private async void NavigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            // gets game mode when navigating to page
-            string value = e.NavigationParameter as string;
-
-            if (!string.IsNullOrWhiteSpace(value))
+            // load the score from Json file
+            try
             {
-                gameMode = value;
+                await deserializeJsonAsync();
+            }
+            catch
+            {
+
             }
  
             // check if the images list is created
@@ -175,15 +177,7 @@ namespace Memory
             // must tell the listview what the source
             // of information is.
             imagesGV.ItemsSource = gameImages;
-
-            // load the score from Json file
-            try
-            {
-                await deserializeJsonAsync();
-            }
-            catch { 
-            
-            }
+ 
         } // NavigationHelper_LoadState()
 
         /// <summary>
@@ -231,7 +225,7 @@ namespace Memory
             int j = 0;
             GameImage tempImage;
 
-            switch (gameMode)
+            switch (appManager.GameMode)
             { 
                 case "Normal":
                     // adds images to the game
@@ -466,62 +460,55 @@ namespace Memory
 
         public async void showScore()
         {
-            headingTB.Text = "Your Score: ";
-            outputTB.Text = gameTimePlayed.ToString();
-            scoreManager.addGameScore(gameTimePlayed, scoreManager.Player);
+            appManager.addGameScore(gameTimePlayed, appManager.Player);
             // shows the top 5 scores
             var dialog = new MessageDialog("Your Score is: " + gameTimePlayed + "\n\n" +
-                                            "Player 1: " + scoreManager.Name1 + " Score: " + scoreManager.Score1 + "\n\n" +
-                                            "Player 2: " + scoreManager.Name2 + " Score: " + scoreManager.Score2 + "\n\n" +
-                                            "Player 3: " + scoreManager.Name3 + " Score: " + scoreManager.Score3 + "\n\n" +
-                                            "Player 4: " + scoreManager.Name4 + " Score: " + scoreManager.Score4 + "\n\n" +
-                                            "Player 5: " + scoreManager.Name5 + " Score: " + scoreManager.Score5);
+                                            "Player 1: " + appManager.Name1 + " Score: " + appManager.Score1 + "\n\n" +
+                                            "Player 2: " + appManager.Name2 + " Score: " + appManager.Score2 + "\n\n" +
+                                            "Player 3: " + appManager.Name3 + " Score: " + appManager.Score3 + "\n\n" +
+                                            "Player 4: " + appManager.Name4 + " Score: " + appManager.Score4 + "\n\n" +
+                                            "Player 5: " + appManager.Name5 + " Score: " + appManager.Score5);
             await dialog.ShowAsync();
 
             // saves scores to Json file
             await writeJsonAsync();
 
             Frame.Navigate(typeof(MainPage));
-            
         } // showScore
 
         private async Task writeJsonAsync()
         {
-            var serializer = new DataContractJsonSerializer(typeof(ScoreManager));
+            var serializer = new DataContractJsonSerializer(typeof(AppManager));
             using (var stream = await ApplicationData.Current.LocalFolder.OpenStreamForWriteAsync(
                                 JSONFILENAME,
                                 CreationCollisionOption.ReplaceExisting))
             {
-                serializer.WriteObject(stream, scoreManager);
+                serializer.WriteObject(stream, appManager);
             }
-
         } // writeJsonAsync()
 
         private async Task deserializeJsonAsync()
         {
-            string content = String.Empty;
-
-            ScoreManager theScore;
-            var jsonSerializer = new DataContractJsonSerializer(typeof(ScoreManager));
+            AppManager theManager;
+            var jsonSerializer = new DataContractJsonSerializer(typeof(AppManager));
 
             var myStream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(JSONFILENAME);
 
-            theScore = (ScoreManager)jsonSerializer.ReadObject(myStream);
+            theManager = (AppManager)jsonSerializer.ReadObject(myStream);
 
-            scoreManager.Player = theScore.Player;
+            appManager.Player = theManager.Player;
+            appManager.GameMode = theManager.GameMode;
 
-            scoreManager.Name1 = theScore.Name1;
-            scoreManager.Score1 = theScore.Score1;
-            scoreManager.Name2 = theScore.Name2;
-            scoreManager.Score2 = theScore.Score2;
-            scoreManager.Name3 = theScore.Name3;
-            scoreManager.Score3 = theScore.Score3;
-            scoreManager.Name4 = theScore.Name4;
-            scoreManager.Score4 = theScore.Score4;
-            scoreManager.Name5 = theScore.Name5;
-            scoreManager.Score5 = theScore.Score5;
+            appManager.Name1 = theManager.Name1;
+            appManager.Score1 = theManager.Score1;
+            appManager.Name2 = theManager.Name2;
+            appManager.Score2 = theManager.Score2;
+            appManager.Name3 = theManager.Name3;
+            appManager.Score3 = theManager.Score3;
+            appManager.Name4 = theManager.Name4;
+            appManager.Score4 = theManager.Score4;
+            appManager.Name5 = theManager.Name5;
+            appManager.Score5 = theManager.Score5;
         } // deserializeJsonAsync()
-
-
     }
 }
