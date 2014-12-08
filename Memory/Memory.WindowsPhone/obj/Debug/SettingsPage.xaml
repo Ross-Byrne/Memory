@@ -1,0 +1,113 @@
+﻿<Page
+    x:Class="Memory.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Memory"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="Blue">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="MEMORY" 
+                       Style="{ThemeResource TitleTextBlockStyle}" 
+                       Margin="0,12,0,0"/>
+            
+            <TextBlock Text="Settings" 
+                       Margin="0,-6.5,0,20" 
+                       Style="{ThemeResource HeaderTextBlockStyle}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <StackPanel Orientation="Vertical">
+                <StackPanel>
+                    <TextBlock Text="Choose what game type you want to play!"
+                               FontSize="24"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Left"/>
+                
+                </StackPanel>
+            
+                <StackPanel Margin="0,10,0,0">
+
+                    <RadioButton x:Name="myFirstRadioButton"
+                                 Content="Normal Game Mode"
+                                 Margin="50,0,0,0"
+                                 HorizontalContentAlignment="Left"
+                                 VerticalAlignment="Top"/>
+
+                    <RadioButton x:Name="mySecondRadioButton"
+                                 Content="Numbers And Symbols (Easy)"
+                                 Margin="50,0,0,0"
+                                 HorizontalContentAlignment="Left"
+                                 VerticalAlignment="Top"/>
+
+                    <RadioButton x:Name="myThirdRadioButton"
+                                 Content="Numbers And Symbols (Hard)"
+                                 Margin="50,0,0,0"
+                                 HorizontalContentAlignment="Left"
+                                 VerticalAlignment="Top"/>
+
+                    <TextBlock Text="Don't forget to save your choice!"
+                               Margin="0,10,0,10"
+                               FontSize="24"
+                               HorizontalAlignment="Left"/>
+                    
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        
+                        
+
+                        <Button x:ConnectionId='3' Content="Check Top Scores" 
+                                x:Name="topScoreBt"
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"
+                                                          
+                                Background="#FF071099"/>
+                        
+                    </StackPanel>
+                    
+                </StackPanel>
+                
+                <StackPanel Margin="0,15,0,0">
+                    <TextBlock Text="Set The Players Name: "
+                               FontSize="24"
+                               HorizontalAlignment="Center"
+                              />
+
+                    <TextBox x:ConnectionId='1' x:Name="playerNameTBX"
+                             Width="200"
+                             Text="Player"
+                             InputScope="AlphanumericFullWidth"
+                                                                    
+                                                              />
+
+                    <Button x:ConnectionId='2' Content="Save Settings And Go Back" 
+                            x:Name="saveGameModeBt"
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center"
+                                                          
+                            Background="#FF071099"/>
+                </StackPanel>
+
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Page>
+

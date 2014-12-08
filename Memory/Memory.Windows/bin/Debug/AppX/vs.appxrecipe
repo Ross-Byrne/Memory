@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MSI</Machine>
+    <WindowsUser>Ross Byrne</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>e78d89e3-b8dc-44bf-ae34-2ee289e39e2c</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>85F923971E1A79B2FCBD178BD1CC5A160EC7AB224967EA0234D65BE6F09A3A1D</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>e78d89e3-b8dc-44bf-ae34-2ee289e39e2c_1.0.0.0_neutral__nxnenr9w0rxgg</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>e78d89e3-b8dc-44bf-ae34-2ee289e39e2c_nxnenr9w0rxgg!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>e78d89e3-b8dc-44bf-ae34-2ee289e39e2c</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Ross Byrne</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-06T21:10:09.759</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\bin\Debug\Memory.Windows.exe">
+      <PackagePath>Memory.Windows.exe</PackagePath>
+      <Modified>2014-12-06T21:10:09.279</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T09:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T09:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T09:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T09:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-12-06T21:10:09.126</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-12-06T21:10:09.126</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\bin\Debug\Memory.Windows.xr.xml">
+      <PackagePath>Memory.Windows.xr.xml</PackagePath>
+      <Modified>2014-12-06T21:10:09.078</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-12-06T21:10:09.528</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

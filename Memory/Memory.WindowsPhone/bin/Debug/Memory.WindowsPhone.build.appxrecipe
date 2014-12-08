@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MSI</Machine>
+    <WindowsUser>Ross Byrne</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>d0cf62ac-951e-46c9-bb16-2fc317fdc02e</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\bin\Debug\Memory.WindowsPhone.exe">
+      <PackagePath>Memory.WindowsPhone.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Beach_Images\image1.jpg">
+      <PackagePath>Assets\Beach_Images\image1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Beach_Images\image2.jpg">
+      <PackagePath>Assets\Beach_Images\image2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Beach_Images\image3.jpg">
+      <PackagePath>Assets\Beach_Images\image3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Beach_Images\image4.jpg">
+      <PackagePath>Assets\Beach_Images\image4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Beach_Images\image5.jpg">
+      <PackagePath>Assets\Beach_Images\image5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Beach_Images\image6.jpg">
+      <PackagePath>Assets\Beach_Images\image6.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Dessert_Images\image1.jpg">
+      <PackagePath>Assets\Dessert_Images\image1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Dessert_Images\image2.jpg">
+      <PackagePath>Assets\Dessert_Images\image2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Dessert_Images\image3.jpg">
+      <PackagePath>Assets\Dessert_Images\image3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Dessert_Images\image4.jpg">
+      <PackagePath>Assets\Dessert_Images\image4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Dessert_Images\image5.jpg">
+      <PackagePath>Assets\Dessert_Images\image5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Dessert_Images\image6.jpg">
+      <PackagePath>Assets\Dessert_Images\image6.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hat_Images\image1.jpg">
+      <PackagePath>Assets\Hat_Images\image1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hat_Images\image2.jpg">
+      <PackagePath>Assets\Hat_Images\image2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hat_Images\image3.jpg">
+      <PackagePath>Assets\Hat_Images\image3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hat_Images\image4.jpg">
+      <PackagePath>Assets\Hat_Images\image4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hat_Images\image5.jpg">
+      <PackagePath>Assets\Hat_Images\image5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hat_Images\image6.jpg">
+      <PackagePath>Assets\Hat_Images\image6.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Number_Images\image1.png">
+      <PackagePath>Assets\Number_Images\image1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Number_Images\image2.png">
+      <PackagePath>Assets\Number_Images\image2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Number_Images\image3.png">
+      <PackagePath>Assets\Number_Images\image3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Number_Images\image4.png">
+      <PackagePath>Assets\Number_Images\image4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Number_Images\image5.png">
+      <PackagePath>Assets\Number_Images\image5.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Number_Images\image6.png">
+      <PackagePath>Assets\Number_Images\image6.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\question_mark.png">
+      <PackagePath>Assets\question_mark.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Symbol_Images\image1.png">
+      <PackagePath>Assets\Symbol_Images\image1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Symbol_Images\image2.png">
+      <PackagePath>Assets\Symbol_Images\image2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Symbol_Images\image3.png">
+      <PackagePath>Assets\Symbol_Images\image3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Symbol_Images\image4.png">
+      <PackagePath>Assets\Symbol_Images\image4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Symbol_Images\image5.png">
+      <PackagePath>Assets\Symbol_Images\image5.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Symbol_Images\image6.png">
+      <PackagePath>Assets\Symbol_Images\image6.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hard_Number_Images\image1.png">
+      <PackagePath>Assets\Hard_Number_Images\image1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hard_Number_Images\image2.png">
+      <PackagePath>Assets\Hard_Number_Images\image2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hard_Number_Images\image3.png">
+      <PackagePath>Assets\Hard_Number_Images\image3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hard_Number_Images\image4.png">
+      <PackagePath>Assets\Hard_Number_Images\image4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hard_Number_Images\image5.png">
+      <PackagePath>Assets\Hard_Number_Images\image5.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hard_Number_Images\image6.png">
+      <PackagePath>Assets\Hard_Number_Images\image6.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hard_Symbol_Images\image1.png">
+      <PackagePath>Assets\Hard_Symbol_Images\image1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hard_Symbol_Images\image2.png">
+      <PackagePath>Assets\Hard_Symbol_Images\image2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hard_Symbol_Images\image3.png">
+      <PackagePath>Assets\Hard_Symbol_Images\image3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hard_Symbol_Images\image4.png">
+      <PackagePath>Assets\Hard_Symbol_Images\image4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hard_Symbol_Images\image5.png">
+      <PackagePath>Assets\Hard_Symbol_Images\image5.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Hard_Symbol_Images\image6.png">
+      <PackagePath>Assets\Hard_Symbol_Images\image6.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Logo.scale-240.png">
+      <PackagePath>Assets\Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\bin\Debug\GamePage.xbf">
+      <PackagePath>GamePage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\bin\Debug\SettingsPage.xbf">
+      <PackagePath>SettingsPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\bin\Debug\Memory.WindowsPhone.xr.xml">
+      <PackagePath>Memory.WindowsPhone.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.WindowsPhone\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

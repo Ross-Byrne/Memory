@@ -1,0 +1,527 @@
+﻿using Memory.Common;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Runtime.Serialization.Json;
+using System.Threading.Tasks;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.Graphics.Display;
+using Windows.Storage;
+using Windows.UI.Popups;
+using Windows.UI.ViewManagement;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
+using Windows.UI.Xaml.Navigation;
+
+// The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
+
+namespace Memory
+{
+    /// <summary>
+    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// </summary>
+    public sealed partial class GamePage : Page
+    {
+        private NavigationHelper navigationHelper;
+        private ObservableDictionary defaultViewModel = new ObservableDictionary();
+
+        private const string JSONFILENAME = "ScoreData.json";
+
+        public ScoreManager scoreManager = new ScoreManager();
+
+        // My random
+        Random random = new Random();
+
+        // my timer
+        DispatcherTimer gameTimer;
+
+        public bool imageHasBeenTapped = false;
+        int gameTimeLeft = 60;
+        int gameTimePlayed = 0;
+        bool gameFinished = false;
+        public int index, lastIndex, pairCount;
+        public int imagesTapped = 0;
+        public bool ready = true;
+
+        // list of images for the game
+        public List<GameImage> gameImages;
+
+        // to keep track of the last image that was tapped
+        public List<GameImage> lastTappedImages = new List<GameImage>();
+
+        string gameMode;
+        public string questionMark = "Assets/question_mark.png";
+        public int[] imageRecord = new int[6];
+
+        public string[] allImages = {   "Assets/Beach_Images/image1.jpg",
+                                        "Assets/Beach_Images/image2.jpg",
+                                        "Assets/Beach_Images/image3.jpg",
+                                        "Assets/Beach_Images/image4.jpg",
+                                        "Assets/Beach_Images/image5.jpg",
+                                        "Assets/Beach_Images/image6.jpg",
+                                        "Assets/Dessert_Images/image1.jpg",
+                                        "Assets/Dessert_Images/image2.jpg",
+                                        "Assets/Dessert_Images/image3.jpg",
+                                        "Assets/Dessert_Images/image4.jpg",
+                                        "Assets/Dessert_Images/image5.jpg",
+                                        "Assets/Dessert_Images/image6.jpg",
+                                        "Assets/Hat_Images/image1.jpg",
+                                        "Assets/Hat_Images/image2.jpg",
+                                        "Assets/Hat_Images/image3.jpg",
+                                        "Assets/Hat_Images/image4.jpg",
+                                        "Assets/Hat_Images/image5.jpg",
+                                        "Assets/Hat_Images/image6.jpg"};
+
+        public string[] numberSymbolImages = {  "Assets/Number_Images/image1.png",
+                                                "Assets/Number_Images/image2.png",
+                                                "Assets/Number_Images/image3.png",
+                                                "Assets/Number_Images/image4.png",
+                                                "Assets/Number_Images/image5.png",
+                                                "Assets/Number_Images/image6.png",
+                                                "Assets/Symbol_Images/image1.png",
+                                                "Assets/Symbol_Images/image2.png",
+                                                "Assets/Symbol_Images/image3.png",
+                                                "Assets/Symbol_Images/image4.png",
+                                                "Assets/Symbol_Images/image5.png",
+                                                "Assets/Symbol_Images/image6.png"};
+
+        public string[] hardNumberSymbolImages = {  "Assets/Hard_Number_Images/image1.png",
+                                                    "Assets/Hard_Number_Images/image2.png",
+                                                    "Assets/Hard_Number_Images/image3.png",
+                                                    "Assets/Hard_Number_Images/image4.png",
+                                                    "Assets/Hard_Number_Images/image5.png",
+                                                    "Assets/Hard_Number_Images/image6.png",
+                                                    "Assets/Hard_Symbol_Images/image1.png",
+                                                    "Assets/Hard_Symbol_Images/image2.png",
+                                                    "Assets/Hard_Symbol_Images/image3.png",
+                                                    "Assets/Hard_Symbol_Images/image4.png",
+                                                    "Assets/Hard_Symbol_Images/image5.png",
+                                                    "Assets/Hard_Symbol_Images/image6.png"};
+
+        public GamePage()
+        {
+            this.InitializeComponent();
+
+            this.navigationHelper = new NavigationHelper(this);
+            this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
+            this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
+
+            gameTimer = new DispatcherTimer();
+            gameTimer.Interval = TimeSpan.FromSeconds(1);
+            gameTimer.Tick += gameTimer_Tick;
+
+            gameTimer.Start();
+
+            headingTB.Text = "Time Left: ";
+            outputTB.Text = "60";
+            scoreManager.Player = "Player";
+        }
+
+        /// <summary>
+        /// Gets the <see cref="NavigationHelper"/> associated with this <see cref="Page"/>.
+        /// </summary>
+        public NavigationHelper NavigationHelper
+        {
+            get { return this.navigationHelper; }
+        }
+
+        /// <summary>
+        /// Gets the view model for this <see cref="Page"/>.
+        /// This can be changed to a strongly typed view model.
+        /// </summary>
+        public ObservableDictionary DefaultViewModel
+        {
+            get { return this.defaultViewModel; }
+        }
+
+        /// <summary>
+        /// Populates the page with content passed during navigation.  Any saved state is also
+        /// provided when recreating a page from a prior session.
+        /// </summary>
+        /// <param name="sender">
+        /// The source of the event; typically <see cref="NavigationHelper"/>
+        /// </param>
+        /// <param name="e">Event data that provides both the navigation parameter passed to
+        /// <see cref="Frame.Navigate(Type, Object)"/> when this page was initially requested and
+        /// a dictionary of state preserved by this page during an earlier
+        /// session.  The state will be null the first time a page is visited.</param>
+        private async void NavigationHelper_LoadState(object sender, LoadStateEventArgs e)
+        {
+            // gets game mode when navigating to page
+            string value = e.NavigationParameter as string;
+
+            if (!string.IsNullOrWhiteSpace(value))
+            {
+                gameMode = value;
+            }
+ 
+            // check if the images list is created
+            // if not get images.
+            if (gameImages == null)
+            {
+                gameImages = new List<GameImage>();
+                getImages();
+                imageSetup();
+            } // if
+
+            // must tell the listview what the source
+            // of information is.
+            imagesGV.ItemsSource = gameImages;
+
+            // load the score from Json file
+            try
+            {
+                await deserializeJsonAsync();
+            }
+            catch { 
+            
+            }
+        } // NavigationHelper_LoadState()
+
+        /// <summary>
+        /// Preserves state associated with this page in case the application is suspended or the
+        /// page is discarded from the navigation cache.  Values must conform to the serialization
+        /// requirements of <see cref="SuspensionManager.SessionState"/>.
+        /// </summary>
+        /// <param name="sender">The source of the event; typically <see cref="NavigationHelper"/></param>
+        /// <param name="e">Event data that provides an empty dictionary to be populated with
+        /// serializable state.</param>
+        private void NavigationHelper_SaveState(object sender, SaveStateEventArgs e)
+        {
+        } // NavigationHelper_SaveState()
+
+        #region NavigationHelper registration
+
+        /// <summary>
+        /// The methods provided in this section are simply used to allow
+        /// NavigationHelper to respond to the page's navigation methods.
+        /// <para>
+        /// Page specific logic should be placed in event handlers for the  
+        /// <see cref="NavigationHelper.LoadState"/>
+        /// and <see cref="NavigationHelper.SaveState"/>.
+        /// The navigation parameter is available in the LoadState method 
+        /// in addition to page state preserved during an earlier session.
+        /// </para>
+        /// </summary>
+        /// <param name="e">Provides data for navigation methods and event
+        /// handlers that cannot cancel the navigation request.</param>
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            this.navigationHelper.OnNavigatedTo(e);
+        } // OnNavigatedTo()
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            this.navigationHelper.OnNavigatedFrom(e);
+        }
+
+        #endregion
+
+        private void getImages()
+        {
+            int value;
+            int j = 0;
+            GameImage tempImage;
+
+            switch (gameMode)
+            { 
+                case "Normal":
+                    // adds images to the game
+                    for (int i = 0; i < 6; i++)
+                    {
+                        tempImage = new GameImage();
+
+                        do
+                        {
+                            value = random.Next(0, allImages.Length);
+                        } while (checkForDoubles(value) != false);
+
+                        imageRecord[j] = value;
+                        j++; // moves image record to next 
+                        tempImage.ImageSource = questionMark;
+                        tempImage.ActualImage = allImages[value];
+
+                        gameImages.Add(tempImage);
+                    } // for    
+                    break;
+                case "EasyNumberSymbol":
+                    // adds images to the game
+                    for (int i = 0; i < 6; i++)
+                    {
+                        tempImage = new GameImage();
+
+                        do
+                        {
+                            value = random.Next(0, numberSymbolImages.Length);
+                        } while (checkForDoubles(value) != false);
+
+                        imageRecord[j] = value; 
+                        j++; // moves image record to next 
+                        tempImage.ImageSource = questionMark;
+                        tempImage.ActualImage = numberSymbolImages[value];
+
+                        gameImages.Add(tempImage);
+                    } // for    
+                    break;
+                case "HardNumberSymbol":
+                    // adds images to the game
+                    for (int i = 0; i < 6; i++)
+                    {
+                        tempImage = new GameImage();
+
+                        do
+                        {
+                            value = random.Next(0, hardNumberSymbolImages.Length);
+                        } while (checkForDoubles(value) != false);
+
+                        imageRecord[j] = value;
+                        j++; // moves image record to next 
+                        tempImage.ImageSource = questionMark;
+                        tempImage.ActualImage = hardNumberSymbolImages[value];
+
+                        gameImages.Add(tempImage);
+                    } // for
+                    break;
+            } // switch()
+
+        } // getImages()
+
+        private bool checkForDoubles(int value)
+        {
+            // to make sure there isn't any doubles
+            bool isDouble = false;
+
+            for (int i = 0; i < 6; i++)
+            {
+                if (imageRecord[i] == value)
+                {
+                    return true;
+                }
+                else
+                {
+                    isDouble = false;
+                }
+            } // for
+
+            return isDouble;
+        } // checkForDoubles()
+
+        private void imageSetup()
+        {
+            int listSize = gameImages.Count;
+            GameImage tempImage;
+          
+            // gets all images and makes a double of them
+            for (int i = 0; i < listSize; i++)
+            {
+                tempImage = new GameImage();
+               
+                tempImage.ImageSource = gameImages[i].ImageSource;
+                tempImage.ActualImage = gameImages[i].ActualImage;
+
+                gameImages.Add(tempImage);
+            } // for
+
+            // shuffles gameRows list to get random placement of images
+            shuffle(gameImages);
+
+            // adds index to objects
+            for (int i = 0; i < gameImages.Count; i++)
+            { 
+                gameImages[i].ImageTag = i.ToString();
+            } // for
+        } // imageSetup()
+
+        private void shuffle(List<GameImage> list)
+        {
+	        // A reworked version of the FisherYates shuffle Algorithm
+
+	        int i, j;
+            GameImage temp;
+            int listSize = list.Count;
+
+	        // Start from the last element and swap one by one
+            for (i = (listSize - 1); i > 0; i--)
+            {
+                // Pick a random index from 0 to i
+                j = random.Next(0, i+1);
+
+                // Swap gameImages[i] with the element at random index
+                temp = new GameImage();
+
+                temp = list[i];
+                gameImages[i] = gameImages[j];
+                gameImages[j] = temp;
+            } // for
+
+        } // shuffle()
+
+        private async void Image_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            // ready is used to avoid a bug when player selects
+            // more then 2 images in a row very fast
+            if (ready == true)
+            {
+                Image img = (Image)sender;
+                GameImage lastTapped;
+
+                index = 0;
+                Int32.TryParse(img.Tag.ToString(), out index);
+
+                if (gameImages[index].pairFound == true)
+                {
+                    // do nothing
+                }
+                else
+                {
+                    if (imageHasBeenTapped == false)
+                    {
+                        imageHasBeenTapped = true;
+                        gameImages[index].ImageSource = gameImages[index].ActualImage;
+
+                        // gets the image that was tapped
+                        lastTapped = new GameImage();
+
+                        lastTapped.ImageTag = index.ToString();
+                        lastTapped.ActualImage = gameImages[index].ActualImage;
+
+                        lastTappedImages.Add(lastTapped);
+                    } // if
+
+                    // so if a second image was tapped but not the same one twice
+                    if (imageHasBeenTapped = true && gameImages[index].ImageTag != lastTappedImages[0].ImageTag)
+                    {
+                        ready = false;
+                        gameImages[index].ImageSource = gameImages[index].ActualImage;
+
+                        if (gameImages[index].ActualImage != lastTappedImages[0].ActualImage) // if pair doesn't match
+                        {
+                            //starts a timer before hiding images again
+                            lastIndex = 0;
+                            Int32.TryParse(lastTappedImages[0].ImageTag.ToString(), out lastIndex);
+
+                            await Task.Delay(TimeSpan.FromMilliseconds(600));
+
+                            gameImages[index].ImageSource = questionMark;
+                            gameImages[lastIndex].ImageSource = questionMark;
+                            gameImages[index].pairFound = false;
+                            gameImages[lastIndex].pairFound = false;
+                            lastTappedImages.Clear();
+                            imageHasBeenTapped = false;
+                            ready = true;
+                        }
+                        else if (gameImages[index].ActualImage == lastTappedImages[0].ActualImage) // if pair does match
+                        {
+
+                            lastIndex = 0;
+                            Int32.TryParse(lastTappedImages[0].ImageTag.ToString(), out lastIndex);
+
+                            gameImages[index].pairFound = true;
+                            gameImages[lastIndex].pairFound = true;
+                            lastTappedImages.Clear();
+                            imageHasBeenTapped = false;
+                            pairCount++;
+                            ready = true;
+                        } // if
+                    } // if
+                } //if
+            } // if
+        } // Image_Tapped()
+
+        void gameTimer_Tick(object sender, object e)
+        {
+            gameTimeLeft--;
+            gameTimePlayed++;
+
+            outputTB.Text = gameTimeLeft.ToString();
+
+            if (pairCount == 6)
+            {
+                gameFinished = true;
+            }
+
+            // when time runs out
+            if (gameTimeLeft == 0)
+            {
+                gameTimer.Stop();
+                gameFinished = true;
+                showScore();
+            }
+
+            // if the game is finished before time runs out
+            if (gameFinished == true)
+            {
+                gameTimer.Stop();
+                showScore();
+            }
+        } // gameTimer_Tick()
+
+        public async void showScore()
+        {
+            headingTB.Text = "Your Score: ";
+            outputTB.Text = gameTimePlayed.ToString();
+            scoreManager.addGameScore(gameTimePlayed, scoreManager.Player);
+            // shows the top 5 scores
+            var dialog = new MessageDialog("Your Score is: " + gameTimePlayed + "\n\n" +
+                                            "Player 1: " + scoreManager.Name1 + " Score: " + scoreManager.Score1 + "\n\n" +
+                                            "Player 2: " + scoreManager.Name2 + " Score: " + scoreManager.Score2 + "\n\n" +
+                                            "Player 3: " + scoreManager.Name3 + " Score: " + scoreManager.Score3 + "\n\n" +
+                                            "Player 4: " + scoreManager.Name4 + " Score: " + scoreManager.Score4 + "\n\n" +
+                                            "Player 5: " + scoreManager.Name5 + " Score: " + scoreManager.Score5);
+            await dialog.ShowAsync();
+
+            // saves scores to Json file
+            await writeJsonAsync();
+
+            Frame.Navigate(typeof(MainPage));
+            
+        } // showScore
+
+        private async Task writeJsonAsync()
+        {
+            var serializer = new DataContractJsonSerializer(typeof(ScoreManager));
+            using (var stream = await ApplicationData.Current.LocalFolder.OpenStreamForWriteAsync(
+                                JSONFILENAME,
+                                CreationCollisionOption.ReplaceExisting))
+            {
+                serializer.WriteObject(stream, scoreManager);
+            }
+
+        } // writeJsonAsync()
+
+        private async Task deserializeJsonAsync()
+        {
+            string content = String.Empty;
+
+            ScoreManager theScore;
+            var jsonSerializer = new DataContractJsonSerializer(typeof(ScoreManager));
+
+            var myStream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(JSONFILENAME);
+
+            theScore = (ScoreManager)jsonSerializer.ReadObject(myStream);
+
+            scoreManager.Player = theScore.Player;
+
+            scoreManager.Name1 = theScore.Name1;
+            scoreManager.Score1 = theScore.Score1;
+            scoreManager.Name2 = theScore.Name2;
+            scoreManager.Score2 = theScore.Score2;
+            scoreManager.Name3 = theScore.Name3;
+            scoreManager.Score3 = theScore.Score3;
+            scoreManager.Name4 = theScore.Name4;
+            scoreManager.Score4 = theScore.Score4;
+            scoreManager.Name5 = theScore.Name5;
+            scoreManager.Score5 = theScore.Score5;
+        } // deserializeJsonAsync()
+
+
+    }
+}

@@ -1,0 +1,86 @@
+﻿<Page
+    x:Class="Memory.GamePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Memory"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Page.Resources>
+        <local:GameImage x:Key="myXAMLImage" />
+        
+        <DataTemplate x:Key="imageTemplate">
+            <Grid>
+                <Image  x:Name="templateImage"
+                        Width="100"
+            			Height="100"
+            			Margin="10"
+            			Stretch="UniformToFill"
+            			Source="{Binding Path=ImageSource, Mode=TwoWay}"
+                        Tag="{Binding ImageTag}"
+                        Tapped="Image_Tapped"/>
+            </Grid>  
+        </DataTemplate> 
+    </Page.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="Blue" DataContext="{StaticResource myXAMLImage}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Memory" 
+                       Margin="5" 
+                       Style="{ThemeResource HeaderTextBlockStyle}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="10">
+
+            <StackPanel x:Name="holdAllSP"
+                        VerticalAlignment="Top"
+                        Height="535">
+                <StackPanel x:Name="gameHeaderSP"
+                            VerticalAlignment="Top"
+                            Height="60">
+
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                        <TextBlock x:Name="headingTB"
+                                   FontSize="24"/>
+
+                        <TextBlock x:Name="outputTB"
+                                   FontSize="24"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+                <GridView   x:Name="imagesGV"
+                            ItemTemplate="{StaticResource imageTemplate}"
+                            HorizontalAlignment="Center">
+                    <GridView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsWrapGrid Height="500" 
+                                           VerticalAlignment="Bottom"/>
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
+                </GridView>
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Page>

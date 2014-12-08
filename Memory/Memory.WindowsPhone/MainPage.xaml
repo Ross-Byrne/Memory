@@ -1,0 +1,89 @@
+﻿<Page
+    x:Class="Memory.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Memory"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="Blue">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Memory" 
+                       HorizontalAlignment="Center"
+                       Margin="5" 
+                       Style="{ThemeResource HeaderTextBlockStyle}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <StackPanel Orientation="Vertical">
+
+
+                <StackPanel>
+
+                    <TextBlock Text="Welcome to Memory! 
+                               The aim of the game is to correctly guess where the 
+                               picture pairs are in the amount of time given!"
+                               TextWrapping="Wrap"
+                               FontSize="24"
+                               HorizontalAlignment="Left"/>
+
+                    <Button Content="Play Memory" 
+                            x:Name="playBT"
+                            HorizontalAlignment="Center" 
+                            Margin="15" 
+                            VerticalAlignment="Top" 
+                            Click="playBT_Click" 
+                            Width="200"
+                            Height="70"
+                            Background="#FF071099"/>
+
+                </StackPanel>
+
+                <StackPanel>
+
+                    <TextBlock Text="Go to the Settings page to add or 
+                               change the player name. You can also change the game mode!"
+                               TextWrapping="Wrap"
+                               FontSize="24"
+                               HorizontalAlignment="Left"/>
+
+                    <Button Content="Settings" 
+                            x:Name="settingsBT"
+                            HorizontalAlignment="Center" 
+                            Margin="15" 
+                            VerticalAlignment="Top" 
+                            Click="settingsBT_Click"
+                            Width="200"
+                            Height="70" 
+                            Background="#FF071099"/>
+                </StackPanel>
+
+                <StackPanel Margin="0,15,0,0">
+                    <TextBlock Text="Tip: The last top 5 player scores can also be seen on the Settings page."
+                               TextWrapping="Wrap"
+                               FontSize="20"
+                               HorizontalAlignment="Left"/>
+                </StackPanel>
+
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Page>
