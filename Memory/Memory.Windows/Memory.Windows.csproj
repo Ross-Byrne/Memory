@@ -179,7 +179,11 @@
     <Content Include="Assets\Number_Images\image6.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-140.png" />
+    <Content Include="Assets\SplashScreen.scale-180.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-140.png" />
+    <Content Include="Assets\StoreLogo.scale-180.png" />
     <Content Include="Assets\Symbol_Images\image1.png" />
     <Content Include="Assets\Symbol_Images\image2.png" />
     <Content Include="Assets\Symbol_Images\image3.png" />
