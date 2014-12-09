@@ -1,14 +1,118 @@
 ﻿<Page
+    x:Name="pageRoot"
     x:Class="Memory.MainPage"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Memory"
+    xmlns:common="using:Memory.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <x:String x:Key="AppName">Memory</x:String>
+    </Page.Resources>
 
+    <Grid x:Name="LayoutRoot" Background="Blue">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Memory" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       Margin="40" 
+                       Style="{ThemeResource HeaderTextBlockStyle}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,20,19,0">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+
+                <StackPanel>
+
+                    <TextBlock Text="Welcome to Memory!"
+                               FontSize="24"
+                               HorizontalAlignment="Center"
+                               TextWrapping="Wrap"
+                               Margin="15"
+                               />
+
+                    <TextBlock Text="The aim of the game is to correctly guess where the picture pairs are in the amount of time given!"
+                               FontSize="24"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Center"
+                               />
+
+                    <Button x:ConnectionId='3' Content="Play Memory" 
+                            x:Name="playBT"
+                            HorizontalAlignment="Center" 
+                            Margin="30" 
+                            VerticalAlignment="Top" 
+                                                 
+                            Width="200"
+                            Height="70"
+                            Background="#FF071099"/>
+
+                </StackPanel>
+
+                <StackPanel>
+
+                    <TextBlock Text="Go to the Settings page to add or change the player name."
+                               FontSize="24"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Center"
+                               />
+
+                    <TextBlock Text="You can also change the game mode!"
+                               FontSize="24"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Center"
+                               Margin="0,15"/>
+
+                    <Button x:ConnectionId='2' Content="Settings" 
+                            x:Name="settingsBT"
+                            HorizontalAlignment="Center" 
+                            Margin="30" 
+                            VerticalAlignment="Top" 
+                                                    
+                            Width="200"
+                            Height="70" 
+                            Background="#FF071099"/>
+                </StackPanel>
+
+                <StackPanel Margin="0,15,0,0">
+                    <TextBlock Text="Tip: The last top 5 player scores can also be seen on the Settings page."
+                               TextWrapping="Wrap"
+                               FontSize="24"
+                               HorizontalAlignment="Center"/>
+
+                    <Button x:ConnectionId='1' Content="Exit" 
+                            x:Name="exitBT"
+                            HorizontalAlignment="Center" 
+                            Margin="30" 
+                            VerticalAlignment="Top" 
+                                                
+                            Width="200"
+                            Height="70" 
+                            Background="#FF071099"/>
+                </StackPanel>
+
+            </StackPanel>
+
+        </Grid>
     </Grid>
 </Page>
 

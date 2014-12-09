@@ -16,6 +16,8 @@
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Memory.Windows.App">
       <m2:VisualElements DisplayName="Memory" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Memory is a game that requires you to remember where certain pictures are. Try and match the picture pairs before the time runs out!" ForegroundText="light" BackgroundColor="#464646">
+        <m2:DefaultTile ShortName="Memory" DefaultSize="square150x150Logo">
+        </m2:DefaultTile>
         <m2:SplashScreen Image="Assets\SplashScreen.png" />
         <m2:InitialRotationPreference>
           <m2:Rotation Preference="landscape" />

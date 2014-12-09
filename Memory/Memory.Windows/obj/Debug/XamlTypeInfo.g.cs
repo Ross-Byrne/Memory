@@ -124,15 +124,33 @@ namespace Memory.Memory_Windows_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[3];
-            _typeNameTable[0] = "Memory.MainPage";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable = new string[12];
+            _typeNameTable[0] = "Memory.GameImage";
+            _typeNameTable[1] = "Object";
+            _typeNameTable[2] = "String";
+            _typeNameTable[3] = "Boolean";
+            _typeNameTable[4] = "Memory.GamePage";
+            _typeNameTable[5] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[6] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[7] = "Memory.Common.ObservableDictionary";
+            _typeNameTable[8] = "Memory.Common.NavigationHelper";
+            _typeNameTable[9] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[10] = "Memory.MainPage";
+            _typeNameTable[11] = "Memory.SettingsPage";
 
-            _typeTable = new global::System.Type[3];
-            _typeTable[0] = typeof(global::Memory.MainPage);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable = new global::System.Type[12];
+            _typeTable[0] = typeof(global::Memory.GameImage);
+            _typeTable[1] = typeof(global::System.Object);
+            _typeTable[2] = typeof(global::System.String);
+            _typeTable[3] = typeof(global::System.Boolean);
+            _typeTable[4] = typeof(global::Memory.GamePage);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[6] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[7] = typeof(global::Memory.Common.ObservableDictionary);
+            _typeTable[8] = typeof(global::Memory.Common.NavigationHelper);
+            _typeTable[9] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[10] = typeof(global::Memory.MainPage);
+            _typeTable[11] = typeof(global::Memory.SettingsPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -167,7 +185,18 @@ namespace Memory.Memory_Windows_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::Memory.MainPage(); }
+        private object Activate_0_GameImage() { return new global::Memory.GameImage(); }
+        private object Activate_4_GamePage() { return new global::Memory.GamePage(); }
+        private object Activate_7_ObservableDictionary() { return new global::Memory.Common.ObservableDictionary(); }
+        private object Activate_10_MainPage() { return new global::Memory.MainPage(); }
+        private object Activate_11_SettingsPage() { return new global::Memory.SettingsPage(); }
+        private void MapAdd_7_ObservableDictionary(object instance, object key, object item)
+        {
+            var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
+            var newKey = (global::System.String)key;
+            var newItem = (global::System.Object)item;
+            collection.Add(newKey, newItem);
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -179,30 +208,226 @@ namespace Memory.Memory_Windows_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  Memory.MainPage
-                userType = new global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+            case 0:   //  Memory.GameImage
+                userType = new global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_0_GameImage;
+                userType.AddMemberName("ImageTag");
+                userType.AddMemberName("ActualImage");
+                userType.AddMemberName("pairFound");
+                userType.AddMemberName("ImageSource");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.Page
+            case 1:   //  Object
                 xamlType = new global::Memory.Memory_Windows_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  Windows.UI.Xaml.Controls.UserControl
+            case 2:   //  String
                 xamlType = new global::Memory.Memory_Windows_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 3:   //  Boolean
+                xamlType = new global::Memory.Memory_Windows_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 4:   //  Memory.GamePage
+                userType = new global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_GamePage;
+                userType.AddMemberName("DefaultViewModel");
+                userType.AddMemberName("NavigationHelper");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::Memory.Memory_Windows_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::Memory.Memory_Windows_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 7:   //  Memory.Common.ObservableDictionary
+                userType = new global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.DictionaryAdd = MapAdd_7_ObservableDictionary;
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  Memory.Common.NavigationHelper
+                userType = new global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 9:   //  Windows.UI.Xaml.DependencyObject
+                xamlType = new global::Memory.Memory_Windows_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 10:   //  Memory.MainPage
+                userType = new global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_MainPage;
+                userType.AddMemberName("DefaultViewModel");
+                userType.AddMemberName("NavigationHelper");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 11:   //  Memory.SettingsPage
+                userType = new global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_11_SettingsPage;
+                userType.AddMemberName("DefaultViewModel");
+                userType.AddMemberName("NavigationHelper");
+                userType.SetIsLocalType();
+                xamlType = userType;
                 break;
             }
             return xamlType;
         }
 
 
+        private object get_0_GameImage_ImageTag(object instance)
+        {
+            var that = (global::Memory.GameImage)instance;
+            return that.ImageTag;
+        }
+        private void set_0_GameImage_ImageTag(object instance, object Value)
+        {
+            var that = (global::Memory.GameImage)instance;
+            that.ImageTag = (global::System.String)Value;
+        }
+        private object get_1_GameImage_ActualImage(object instance)
+        {
+            var that = (global::Memory.GameImage)instance;
+            return that.ActualImage;
+        }
+        private void set_1_GameImage_ActualImage(object instance, object Value)
+        {
+            var that = (global::Memory.GameImage)instance;
+            that.ActualImage = (global::System.String)Value;
+        }
+        private object get_2_GameImage_pairFound(object instance)
+        {
+            var that = (global::Memory.GameImage)instance;
+            return that.pairFound;
+        }
+        private void set_2_GameImage_pairFound(object instance, object Value)
+        {
+            var that = (global::Memory.GameImage)instance;
+            that.pairFound = (global::System.Boolean)Value;
+        }
+        private object get_3_GameImage_ImageSource(object instance)
+        {
+            var that = (global::Memory.GameImage)instance;
+            return that.ImageSource;
+        }
+        private void set_3_GameImage_ImageSource(object instance, object Value)
+        {
+            var that = (global::Memory.GameImage)instance;
+            that.ImageSource = (global::System.String)Value;
+        }
+        private object get_4_GamePage_DefaultViewModel(object instance)
+        {
+            var that = (global::Memory.GamePage)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_5_GamePage_NavigationHelper(object instance)
+        {
+            var that = (global::Memory.GamePage)instance;
+            return that.NavigationHelper;
+        }
+        private object get_6_MainPage_DefaultViewModel(object instance)
+        {
+            var that = (global::Memory.MainPage)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_7_MainPage_NavigationHelper(object instance)
+        {
+            var that = (global::Memory.MainPage)instance;
+            return that.NavigationHelper;
+        }
+        private object get_8_SettingsPage_DefaultViewModel(object instance)
+        {
+            var that = (global::Memory.SettingsPage)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_9_SettingsPage_NavigationHelper(object instance)
+        {
+            var that = (global::Memory.SettingsPage)instance;
+            return that.NavigationHelper;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::Memory.Memory_Windows_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "Memory.GameImage.ImageTag":
+                userType = (global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Memory.GameImage");
+                xamlMember = new global::Memory.Memory_Windows_XamlTypeInfo.XamlMember(this, "ImageTag", "String");
+                xamlMember.Getter = get_0_GameImage_ImageTag;
+                xamlMember.Setter = set_0_GameImage_ImageTag;
+                break;
+            case "Memory.GameImage.ActualImage":
+                userType = (global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Memory.GameImage");
+                xamlMember = new global::Memory.Memory_Windows_XamlTypeInfo.XamlMember(this, "ActualImage", "String");
+                xamlMember.Getter = get_1_GameImage_ActualImage;
+                xamlMember.Setter = set_1_GameImage_ActualImage;
+                break;
+            case "Memory.GameImage.pairFound":
+                userType = (global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Memory.GameImage");
+                xamlMember = new global::Memory.Memory_Windows_XamlTypeInfo.XamlMember(this, "pairFound", "Boolean");
+                xamlMember.Getter = get_2_GameImage_pairFound;
+                xamlMember.Setter = set_2_GameImage_pairFound;
+                break;
+            case "Memory.GameImage.ImageSource":
+                userType = (global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Memory.GameImage");
+                xamlMember = new global::Memory.Memory_Windows_XamlTypeInfo.XamlMember(this, "ImageSource", "String");
+                xamlMember.Getter = get_3_GameImage_ImageSource;
+                xamlMember.Setter = set_3_GameImage_ImageSource;
+                break;
+            case "Memory.GamePage.DefaultViewModel":
+                userType = (global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Memory.GamePage");
+                xamlMember = new global::Memory.Memory_Windows_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Memory.Common.ObservableDictionary");
+                xamlMember.Getter = get_4_GamePage_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Memory.GamePage.NavigationHelper":
+                userType = (global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Memory.GamePage");
+                xamlMember = new global::Memory.Memory_Windows_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Memory.Common.NavigationHelper");
+                xamlMember.Getter = get_5_GamePage_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Memory.MainPage.DefaultViewModel":
+                userType = (global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Memory.MainPage");
+                xamlMember = new global::Memory.Memory_Windows_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Memory.Common.ObservableDictionary");
+                xamlMember.Getter = get_6_MainPage_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Memory.MainPage.NavigationHelper":
+                userType = (global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Memory.MainPage");
+                xamlMember = new global::Memory.Memory_Windows_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Memory.Common.NavigationHelper");
+                xamlMember.Getter = get_7_MainPage_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Memory.SettingsPage.DefaultViewModel":
+                userType = (global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Memory.SettingsPage");
+                xamlMember = new global::Memory.Memory_Windows_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Memory.Common.ObservableDictionary");
+                xamlMember.Getter = get_8_SettingsPage_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Memory.SettingsPage.NavigationHelper":
+                userType = (global::Memory.Memory_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Memory.SettingsPage");
+                xamlMember = new global::Memory.Memory_Windows_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Memory.Common.NavigationHelper");
+                xamlMember.Getter = get_9_SettingsPage_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            }
             return xamlMember;
         }
     }

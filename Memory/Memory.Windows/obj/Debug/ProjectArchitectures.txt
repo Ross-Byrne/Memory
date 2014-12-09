@@ -1,1 +1,1 @@
-C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\Memory.Windows.csproj;neutral
+C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Memory.Windows.csproj;neutral

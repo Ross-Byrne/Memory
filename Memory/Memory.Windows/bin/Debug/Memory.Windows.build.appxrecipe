@@ -7,44 +7,179 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>e78d89e3-b8dc-44bf-ae34-2ee289e39e2c</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\obj\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\obj\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\bin\Debug\Memory.Windows.exe">
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\Memory.Windows.exe">
       <PackagePath>Memory.Windows.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Beach_Images\image1.jpg">
+      <PackagePath>Assets\Beach_Images\image1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Beach_Images\image2.jpg">
+      <PackagePath>Assets\Beach_Images\image2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Beach_Images\image3.jpg">
+      <PackagePath>Assets\Beach_Images\image3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Beach_Images\image4.jpg">
+      <PackagePath>Assets\Beach_Images\image4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Beach_Images\image5.jpg">
+      <PackagePath>Assets\Beach_Images\image5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Beach_Images\image6.jpg">
+      <PackagePath>Assets\Beach_Images\image6.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Dessert_Images\image1.jpg">
+      <PackagePath>Assets\Dessert_Images\image1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Dessert_Images\image2.jpg">
+      <PackagePath>Assets\Dessert_Images\image2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Dessert_Images\image3.jpg">
+      <PackagePath>Assets\Dessert_Images\image3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Dessert_Images\image4.jpg">
+      <PackagePath>Assets\Dessert_Images\image4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Dessert_Images\image5.jpg">
+      <PackagePath>Assets\Dessert_Images\image5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Dessert_Images\image6.jpg">
+      <PackagePath>Assets\Dessert_Images\image6.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hat_Images\image1.jpg">
+      <PackagePath>Assets\Hat_Images\image1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hat_Images\image2.jpg">
+      <PackagePath>Assets\Hat_Images\image2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hat_Images\image3.jpg">
+      <PackagePath>Assets\Hat_Images\image3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hat_Images\image4.jpg">
+      <PackagePath>Assets\Hat_Images\image4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hat_Images\image5.jpg">
+      <PackagePath>Assets\Hat_Images\image5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hat_Images\image6.jpg">
+      <PackagePath>Assets\Hat_Images\image6.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hard_Number_Images\image1.png">
+      <PackagePath>Assets\Hard_Number_Images\image1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hard_Number_Images\image2.png">
+      <PackagePath>Assets\Hard_Number_Images\image2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hard_Number_Images\image3.png">
+      <PackagePath>Assets\Hard_Number_Images\image3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hard_Number_Images\image4.png">
+      <PackagePath>Assets\Hard_Number_Images\image4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hard_Number_Images\image5.png">
+      <PackagePath>Assets\Hard_Number_Images\image5.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hard_Number_Images\image6.png">
+      <PackagePath>Assets\Hard_Number_Images\image6.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hard_Symbol_Images\image1.png">
+      <PackagePath>Assets\Hard_Symbol_Images\image1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hard_Symbol_Images\image2.png">
+      <PackagePath>Assets\Hard_Symbol_Images\image2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hard_Symbol_Images\image3.png">
+      <PackagePath>Assets\Hard_Symbol_Images\image3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hard_Symbol_Images\image4.png">
+      <PackagePath>Assets\Hard_Symbol_Images\image4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hard_Symbol_Images\image5.png">
+      <PackagePath>Assets\Hard_Symbol_Images\image5.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Hard_Symbol_Images\image6.png">
+      <PackagePath>Assets\Hard_Symbol_Images\image6.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Number_Images\image1.png">
+      <PackagePath>Assets\Number_Images\image1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Number_Images\image2.png">
+      <PackagePath>Assets\Number_Images\image2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Number_Images\image3.png">
+      <PackagePath>Assets\Number_Images\image3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Number_Images\image4.png">
+      <PackagePath>Assets\Number_Images\image4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Number_Images\image5.png">
+      <PackagePath>Assets\Number_Images\image5.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Number_Images\image6.png">
+      <PackagePath>Assets\Number_Images\image6.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Symbol_Images\image1.png">
+      <PackagePath>Assets\Symbol_Images\image1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Symbol_Images\image2.png">
+      <PackagePath>Assets\Symbol_Images\image2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Symbol_Images\image3.png">
+      <PackagePath>Assets\Symbol_Images\image3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Symbol_Images\image4.png">
+      <PackagePath>Assets\Symbol_Images\image4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Symbol_Images\image5.png">
+      <PackagePath>Assets\Symbol_Images\image5.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Symbol_Images\image6.png">
+      <PackagePath>Assets\Symbol_Images\image6.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\question_mark.png">
+      <PackagePath>Assets\question_mark.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\GamePage.xbf">
+      <PackagePath>GamePage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\bin\Debug\Memory.Windows.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\SettingsPage.xbf">
+      <PackagePath>SettingsPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\Memory.Windows.xr.xml">
       <PackagePath>Memory.Windows.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\Visual Studio 2013\Projects\Memory\Memory\Memory.Windows\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
