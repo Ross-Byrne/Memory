@@ -500,5 +500,10 @@ namespace Memory
             appManager.Name5 = theManager.Name5;
             appManager.Score5 = theManager.Score5;
         } // deserializeJsonAsync()
+
+        private void goBackBt_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        } // goBackBt_Click()
     }
 }

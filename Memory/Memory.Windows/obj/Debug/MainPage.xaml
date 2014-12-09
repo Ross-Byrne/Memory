@@ -56,7 +56,7 @@
                                HorizontalAlignment="Center"
                                />
 
-                    <Button x:ConnectionId='3' Content="Play Memory" 
+                    <Button x:ConnectionId='2' Content="Play Memory" 
                             x:Name="playBT"
                             HorizontalAlignment="Center" 
                             Margin="30" 
@@ -82,7 +82,7 @@
                                HorizontalAlignment="Center"
                                Margin="0,15"/>
 
-                    <Button x:ConnectionId='2' Content="Settings" 
+                    <Button x:ConnectionId='1' Content="Settings" 
                             x:Name="settingsBT"
                             HorizontalAlignment="Center" 
                             Margin="30" 
@@ -98,16 +98,6 @@
                                TextWrapping="Wrap"
                                FontSize="24"
                                HorizontalAlignment="Center"/>
-
-                    <Button x:ConnectionId='1' Content="Exit" 
-                            x:Name="exitBT"
-                            HorizontalAlignment="Center" 
-                            Margin="30" 
-                            VerticalAlignment="Top" 
-                                                
-                            Width="200"
-                            Height="70" 
-                            Background="#FF071099"/>
                 </StackPanel>
 
             </StackPanel>

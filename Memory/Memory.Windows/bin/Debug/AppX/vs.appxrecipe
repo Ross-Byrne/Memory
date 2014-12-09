@@ -8,7 +8,7 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>e78d89e3-b8dc-44bf-ae34-2ee289e39e2c</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\obj\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>85F923971E1A79B2FCBD178BD1CC5A160EC7AB224967EA0234D65BE6F09A3A1D</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>618F81DBEADF25EE1845D4ECBA24297678D1CD1C039A709A475BFE0F04D20A0E</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>e78d89e3-b8dc-44bf-ae34-2ee289e39e2c_1.0.0.0_neutral__nxnenr9w0rxgg</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>e78d89e3-b8dc-44bf-ae34-2ee289e39e2c_nxnenr9w0rxgg!App</RegisteredUserModeAppID>
     <RegisteredPackageID>e78d89e3-b8dc-44bf-ae34-2ee289e39e2c</RegisteredPackageID>
@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-09T11:54:08.830</Modified>
+      <Modified>2014-12-09T14:52:27.649</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\Memory.Windows.exe">
       <PackagePath>Memory.Windows.exe</PackagePath>
-      <Modified>2014-12-09T12:35:45.123</Modified>
+      <Modified>2014-12-09T14:51:14.468</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Beach_Images\image1.jpg">
       <PackagePath>Assets\Beach_Images\image1.jpg</PackagePath>
@@ -151,7 +151,7 @@
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-14T09:55:28.000</Modified>
+      <Modified>2014-12-09T14:37:20.476</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Number_Images\image1.png">
       <PackagePath>Assets\Number_Images\image1.png</PackagePath>
@@ -180,17 +180,17 @@
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-14T09:55:28.000</Modified>
+      <Modified>2014-12-09T14:38:23.657</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-14T09:55:28.000</Modified>
+      <Modified>2014-12-09T14:50:47.409</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-14T09:55:28.000</Modified>
+      <Modified>2014-12-09T14:40:30.053</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Symbol_Images\image1.png">
       <PackagePath>Assets\Symbol_Images\image1.png</PackagePath>
@@ -222,27 +222,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-12-07T20:16:56.115</Modified>
+      <Modified>2014-12-09T14:51:14.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\GamePage.xbf">
       <PackagePath>GamePage.xbf</PackagePath>
-      <Modified>2014-12-09T12:35:44.913</Modified>
+      <Modified>2014-12-09T14:51:14.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-12-09T12:35:44.913</Modified>
+      <Modified>2014-12-09T14:51:14.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\SettingsPage.xbf">
       <PackagePath>SettingsPage.xbf</PackagePath>
-      <Modified>2014-12-09T12:35:44.913</Modified>
+      <Modified>2014-12-09T14:51:14.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\Memory.Windows.xr.xml">
       <PackagePath>Memory.Windows.xr.xml</PackagePath>
-      <Modified>2014-12-09T12:05:23.217</Modified>
+      <Modified>2014-12-09T13:55:45.318</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-12-09T11:54:08.522</Modified>
+      <Modified>2014-12-09T14:52:27.539</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

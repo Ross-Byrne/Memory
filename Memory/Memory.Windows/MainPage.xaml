@@ -98,16 +98,6 @@
                                TextWrapping="Wrap"
                                FontSize="24"
                                HorizontalAlignment="Center"/>
-
-                    <Button Content="Exit" 
-                            x:Name="exitBT"
-                            HorizontalAlignment="Center" 
-                            Margin="30" 
-                            VerticalAlignment="Top" 
-                            Click="exitBT_Click"
-                            Width="200"
-                            Height="70" 
-                            Background="#FF071099"/>
                 </StackPanel>
 
             </StackPanel>

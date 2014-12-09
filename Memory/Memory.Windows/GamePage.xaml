@@ -47,9 +47,10 @@
         <!-- Title Panel -->
         <StackPanel Grid.Row="0">
             <TextBlock Text="Memory" 
-                       Margin="40" 
-                       Style="{ThemeResource HeaderTextBlockStyle}" 
-                       HorizontalAlignment="Center"/>
+        		       Margin="40" 
+        		       Style="{ThemeResource HeaderTextBlockStyle}" 
+        		       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
@@ -84,7 +85,15 @@
                     </GridView.ItemsPanel>
                 </GridView>
             </StackPanel>
-
+            
+            <Button x:Name="goBackBt"
+            	    Content="Go Back"
+            	    HorizontalAlignment="Left"
+            	    VerticalAlignment="Bottom"
+                    Margin="50"
+                    Width="150"
+                    Height="50"
+                    Click="goBackBt_Click"/>
         </Grid>
     </Grid>
 </Page>
