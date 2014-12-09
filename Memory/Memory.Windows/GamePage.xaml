@@ -76,7 +76,8 @@
 
                 <GridView   x:Name="imagesGV"
                             ItemTemplate="{StaticResource imageTemplate}"
-                            HorizontalAlignment="Center">
+                            HorizontalAlignment="Center"
+                            IsItemClickEnabled="False">
                     <GridView.ItemsPanel>
                         <ItemsPanelTemplate>
                             <ItemsWrapGrid Height="550" 

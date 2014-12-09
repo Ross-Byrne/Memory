@@ -6,7 +6,7 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <PackageIdentityName>e78d89e3-b8dc-44bf-ae34-2ee289e39e2c</PackageIdentityName>
+    <PackageIdentityName>40354RossByrne.MemoryMadness</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\obj\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>

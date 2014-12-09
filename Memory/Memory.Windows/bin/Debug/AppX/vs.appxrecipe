@@ -6,27 +6,27 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <PackageIdentityName>e78d89e3-b8dc-44bf-ae34-2ee289e39e2c</PackageIdentityName>
+    <PackageIdentityName>40354RossByrne.MemoryMadness</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\obj\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>DDC4E7F4921DA9665BD045E788EF4CA0B20988DC88A9FB13BB2FB44CCD630892</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>e78d89e3-b8dc-44bf-ae34-2ee289e39e2c_1.0.0.0_neutral__nxnenr9w0rxgg</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>e78d89e3-b8dc-44bf-ae34-2ee289e39e2c_nxnenr9w0rxgg!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>e78d89e3-b8dc-44bf-ae34-2ee289e39e2c</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=Ross Byrne</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <RegisteredManifestChecksum>E712AFCC480C6468FAA0194362C813ED5AD49F802630605B73AF0BDDFAB07E76</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>40354RossByrne.MemoryMadness_1.1.0.0_neutral__1hf4sjgy4hrd0</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>40354RossByrne.MemoryMadness_1hf4sjgy4hrd0!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>40354RossByrne.MemoryMadness</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=9DCFD1C6-AF85-4323-96E2-05A768FDAF10</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.0.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-09T15:54:09.525</Modified>
+      <Modified>2014-12-09T16:40:14.606</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\Memory.Windows.exe">
       <PackagePath>Memory.Windows.exe</PackagePath>
-      <Modified>2014-12-09T15:54:09.281</Modified>
+      <Modified>2014-12-09T16:40:14.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Beach_Images\image1.jpg">
       <PackagePath>Assets\Beach_Images\image1.jpg</PackagePath>
@@ -246,7 +246,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\GamePage.xbf">
       <PackagePath>GamePage.xbf</PackagePath>
-      <Modified>2014-12-09T15:54:09.077</Modified>
+      <Modified>2014-12-09T16:40:14.142</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
@@ -258,11 +258,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\Memory.Windows.xr.xml">
       <PackagePath>Memory.Windows.xr.xml</PackagePath>
-      <Modified>2014-12-09T13:55:45.318</Modified>
+      <Modified>2014-12-09T16:40:14.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-12-09T15:54:09.441</Modified>
+      <Modified>2014-12-09T16:40:14.518</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

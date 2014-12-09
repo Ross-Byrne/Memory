@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="d0cf62ac-951e-46c9-bb16-2fc317fdc02e" Publisher="CN=Ross Byrne" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="d0cf62ac-951e-46c9-bb16-2fc317fdc02e" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="40354RossByrne.MemoryMadness" Publisher="CN=9DCFD1C6-AF85-4323-96E2-05A768FDAF10" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="abe38de7-f9c4-4570-8f29-bfe4d438b5e8" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Memory.WindowsPhone</DisplayName>
+    <DisplayName>Memory Madness!</DisplayName>
     <PublisherDisplayName>Ross Byrne</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -16,7 +16,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Memory.WindowsPhone.App">
-      <m3:VisualElements DisplayName="Memory" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Memory is a game that requires you to remember where certain pictures are. Try and match the picture pairs before the time runs out!" ForegroundText="light" BackgroundColor="transparent">
+      <m3:VisualElements DisplayName="Memory Madness!" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Memory Madness! is a game that requires you to remember where certain pictures are. Try and match the picture pairs before the time runs out!" ForegroundText="light" BackgroundColor="transparent">
         <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
           <m3:ShowNameOnTiles>
             <m3:ShowOn Tile="square150x150Logo" />
@@ -29,7 +29,4 @@
       </m3:VisualElements>
     </Application>
   </Applications>
-  <Capabilities>
-    <Capability Name="internetClientServer" />
-  </Capabilities>
 </Package>

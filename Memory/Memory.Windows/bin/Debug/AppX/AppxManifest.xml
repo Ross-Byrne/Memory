@@ -7,9 +7,9 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="e78d89e3-b8dc-44bf-ae34-2ee289e39e2c" Publisher="CN=Ross Byrne" Version="1.0.0.0" ProcessorArchitecture="neutral" />
+  <Identity Name="40354RossByrne.MemoryMadness" Publisher="CN=9DCFD1C6-AF85-4323-96E2-05A768FDAF10" Version="1.1.0.0" ProcessorArchitecture="neutral" />
   <Properties>
-    <DisplayName>Memory.Windows</DisplayName>
+    <DisplayName>Memory Madness!</DisplayName>
     <PublisherDisplayName>Ross Byrne</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -22,8 +22,8 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="Memory.Windows.exe" EntryPoint="Memory.Windows.App">
-      <m2:VisualElements DisplayName="Memory" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Memory is a game that requires you to remember where certain pictures are. Try and match the picture pairs before the time runs out!" ForegroundText="light" BackgroundColor="#1128d4">
-        <m2:DefaultTile ShortName="Memory" DefaultSize="square150x150Logo">
+      <m2:VisualElements DisplayName="Memory Madness!" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Memory Madness! is a game that requires you to remember where certain pictures are. Try and match the picture pairs before the time runs out!" ForegroundText="light" BackgroundColor="#1128d4">
+        <m2:DefaultTile ShortName="Memory Madness!" DefaultSize="square150x150Logo">
           <m2:ShowNameOnTiles>
             <m2:ShowOn Tile="square150x150Logo" />
           </m2:ShowNameOnTiles>
@@ -35,9 +35,6 @@
       </m2:VisualElements>
     </Application>
   </Applications>
-  <Capabilities>
-    <Capability Name="internetClient" />
-  </Capabilities>
   <build:Metadata>
     <build:Item Name="SharedGUID" Value="8232ad63-64e1-4661-af34-6a51659a8c69" />
     <build:Item Name="CodeSharingProject" Value="248F659F-DAC5-46E8-AC09-60EC9FC95053" />
