@@ -19,6 +19,7 @@
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
     <PackageCertificateThumbprint>F9E5105D75B949FC7864963B746A29D57EBE3282</PackageCertificateThumbprint>
+    <AppxBundle>Always</AppxBundle>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -175,6 +176,9 @@
     <Content Include="Assets\Hat_Images\image5.jpg" />
     <Content Include="Assets\Hat_Images\image6.jpg" />
     <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\Logo.scale-140.png" />
+    <Content Include="Assets\Logo.scale-180.png" />
+    <Content Include="Assets\Logo.scale-80.png" />
     <Content Include="Assets\Number_Images\image1.png" />
     <Content Include="Assets\Number_Images\image2.png" />
     <Content Include="Assets\Number_Images\image3.png" />
@@ -182,9 +186,16 @@
     <Content Include="Assets\Number_Images\image5.png" />
     <Content Include="Assets\Number_Images\image6.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
+    <Content Include="Assets\SmallLogo.scale-140.png" />
+    <Content Include="Assets\SmallLogo.scale-180.png" />
+    <Content Include="Assets\SmallLogo.scale-80.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-140.png" />
     <Content Include="Assets\SplashScreen.scale-180.png" />
+    <Content Include="Assets\Square70x70Logo.scale-100.png" />
+    <Content Include="Assets\Square70x70Logo.scale-140.png" />
+    <Content Include="Assets\Square70x70Logo.scale-180.png" />
+    <Content Include="Assets\Square70x70Logo.scale-80.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-140.png" />
     <Content Include="Assets\StoreLogo.scale-180.png" />
@@ -195,6 +206,10 @@
     <Content Include="Assets\Symbol_Images\image5.png" />
     <Content Include="Assets\Symbol_Images\image6.png" />
     <Content Include="Assets\question_mark.png" />
+    <Content Include="Assets\WideLogo.scale-100.png" />
+    <Content Include="Assets\WideLogo.scale-140.png" />
+    <Content Include="Assets\WideLogo.scale-180.png" />
+    <Content Include="Assets\WideLogo.scale-80.png" />
     <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">

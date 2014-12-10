@@ -29,6 +29,9 @@ Assets\Hat_Images\image4.jpg
 Assets\Hat_Images\image5.jpg
 Assets\Hat_Images\image6.jpg
 Assets\Logo.scale-100.png
+Assets\Logo.scale-140.png
+Assets\Logo.scale-180.png
+Assets\Logo.scale-80.png
 Assets\Number_Images\image1.png
 Assets\Number_Images\image2.png
 Assets\Number_Images\image3.png
@@ -37,9 +40,16 @@ Assets\Number_Images\image5.png
 Assets\Number_Images\image6.png
 Assets\question_mark.png
 Assets\SmallLogo.scale-100.png
+Assets\SmallLogo.scale-140.png
+Assets\SmallLogo.scale-180.png
+Assets\SmallLogo.scale-80.png
 Assets\SplashScreen.scale-100.png
 Assets\SplashScreen.scale-140.png
 Assets\SplashScreen.scale-180.png
+Assets\Square70x70Logo.scale-100.png
+Assets\Square70x70Logo.scale-140.png
+Assets\Square70x70Logo.scale-180.png
+Assets\Square70x70Logo.scale-80.png
 Assets\StoreLogo.scale-100.png
 Assets\StoreLogo.scale-140.png
 Assets\StoreLogo.scale-180.png
@@ -49,6 +59,10 @@ Assets\Symbol_Images\image3.png
 Assets\Symbol_Images\image4.png
 Assets\Symbol_Images\image5.png
 Assets\Symbol_Images\image6.png
+Assets\WideLogo.scale-100.png
+Assets\WideLogo.scale-140.png
+Assets\WideLogo.scale-180.png
+Assets\WideLogo.scale-80.png
 App.xbf
 GamePage.xbf
 MainPage.xbf

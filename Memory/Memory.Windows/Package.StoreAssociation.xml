@@ -353,6 +353,29 @@
       <ReservedName>Memory Madness!</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
-  <AccountPackageIdentityNames />
-  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/418e8a6e-b07e-4ddc-84b5-faf244583f2d" />
+  <AccountPackageIdentityNames>
+    <MainPackageIdentityName>40354RossByrne.FamousQuoteGenerator</MainPackageIdentityName>
+    <MainPackageIdentityName>40354RossByrne.HelpMeDecide</MainPackageIdentityName>
+    <MainPackageIdentityName>40354RossByrne.HowToMakeTea</MainPackageIdentityName>
+    <MainPackageIdentityName>40354RossByrne.HowToTieShoelaces</MainPackageIdentityName>
+  </AccountPackageIdentityNames>
+  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/418e8a6e-b07e-4ddc-84b5-faf244583f2d">
+    <BundleInfo>
+      <PackageInfo>
+        <OsMinVersion>6.3.0.0</OsMinVersion>
+        <PackageArchitecture>Neutral</PackageArchitecture>
+        <PackageMaxArchitectureVersion>1.1.0.0</PackageMaxArchitectureVersion>
+      </PackageInfo>
+      <PackageInfo>
+        <OsMinVersion>6.3.0.0</OsMinVersion>
+        <PackageArchitecture>Neutral</PackageArchitecture>
+        <PackageMaxArchitectureVersion>1.1.0.0</PackageMaxArchitectureVersion>
+      </PackageInfo>
+      <PackageInfo>
+        <OsMinVersion>6.3.0.0</OsMinVersion>
+        <PackageArchitecture>Neutral</PackageArchitecture>
+        <PackageMaxArchitectureVersion>1.1.0.0</PackageMaxArchitectureVersion>
+      </PackageInfo>
+    </BundleInfo>
+  </PackageInfoList>
 </StoreAssociation>

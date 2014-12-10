@@ -8,7 +8,7 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>40354RossByrne.MemoryMadness</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\obj\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>E712AFCC480C6468FAA0194362C813ED5AD49F802630605B73AF0BDDFAB07E76</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>42E3E586E98202A4EDB59F6BF776DE52C29E3516337D9288EC4BC1911A4EAD7D</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>40354RossByrne.MemoryMadness_1.1.0.0_neutral__1hf4sjgy4hrd0</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>40354RossByrne.MemoryMadness_1hf4sjgy4hrd0!App</RegisteredUserModeAppID>
     <RegisteredPackageID>40354RossByrne.MemoryMadness</RegisteredPackageID>
@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-09T16:40:14.606</Modified>
+      <Modified>2014-12-10T13:46:04.854</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\Memory.Windows.exe">
       <PackagePath>Memory.Windows.exe</PackagePath>
-      <Modified>2014-12-09T16:40:14.348</Modified>
+      <Modified>2014-12-10T13:46:04.252</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Beach_Images\image1.jpg">
       <PackagePath>Assets\Beach_Images\image1.jpg</PackagePath>
@@ -151,7 +151,22 @@
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-09T14:37:20.476</Modified>
+      <Modified>2014-12-10T13:23:18.775</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Logo.scale-140.png">
+      <PackagePath>Assets\Logo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-10T13:26:53.271</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Logo.scale-180.png">
+      <PackagePath>Assets\Logo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-10T13:27:45.575</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Logo.scale-80.png">
+      <PackagePath>Assets\Logo.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-10T13:24:08.245</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Number_Images\image1.png">
       <PackagePath>Assets\Number_Images\image1.png</PackagePath>
@@ -182,20 +197,55 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-12-09T14:38:23.657</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\SmallLogo.scale-140.png">
+      <PackagePath>Assets\SmallLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-10T13:19:22.538</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\SmallLogo.scale-180.png">
+      <PackagePath>Assets\SmallLogo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-10T13:21:21.193</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\SmallLogo.scale-80.png">
+      <PackagePath>Assets\SmallLogo.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-10T13:18:24.114</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-09T15:43:50.702</Modified>
+      <Modified>2014-12-10T13:45:57.895</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\SplashScreen.scale-140.png">
       <PackagePath>Assets\SplashScreen.scale-140.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-09T15:43:20.074</Modified>
+      <Modified>2014-12-10T13:42:56.395</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\SplashScreen.scale-180.png">
       <PackagePath>Assets\SplashScreen.scale-180.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-09T15:42:36.927</Modified>
+      <Modified>2014-12-10T13:39:47.171</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Square70x70Logo.scale-100.png">
+      <PackagePath>Assets\Square70x70Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-10T13:32:15.272</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Square70x70Logo.scale-140.png">
+      <PackagePath>Assets\Square70x70Logo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-10T13:31:27.406</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Square70x70Logo.scale-180.png">
+      <PackagePath>Assets\Square70x70Logo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-10T13:30:40.331</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Square70x70Logo.scale-80.png">
+      <PackagePath>Assets\Square70x70Logo.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-10T13:33:09.115</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
@@ -240,6 +290,26 @@
       <PackagePath>Assets\question_mark.png</PackagePath>
       <Modified>2014-12-08T23:10:22.898</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\WideLogo.scale-100.png">
+      <PackagePath>Assets\WideLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-10T13:09:01.469</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\WideLogo.scale-140.png">
+      <PackagePath>Assets\WideLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-10T13:14:03.021</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\WideLogo.scale-180.png">
+      <PackagePath>Assets\WideLogo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-10T13:16:21.455</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\WideLogo.scale-80.png">
+      <PackagePath>Assets\WideLogo.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-10T13:10:33.001</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
       <Modified>2014-12-09T14:51:14.262</Modified>
@@ -262,7 +332,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-12-09T16:40:14.518</Modified>
+      <Modified>2014-12-10T13:46:04.666</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

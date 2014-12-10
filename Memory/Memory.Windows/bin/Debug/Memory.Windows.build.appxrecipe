@@ -113,6 +113,18 @@
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Logo.scale-140.png">
+      <PackagePath>Assets\Logo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Logo.scale-180.png">
+      <PackagePath>Assets\Logo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Logo.scale-80.png">
+      <PackagePath>Assets\Logo.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Number_Images\image1.png">
       <PackagePath>Assets\Number_Images\image1.png</PackagePath>
     </AppxPackagedFile>
@@ -135,6 +147,18 @@
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\SmallLogo.scale-140.png">
+      <PackagePath>Assets\SmallLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\SmallLogo.scale-180.png">
+      <PackagePath>Assets\SmallLogo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\SmallLogo.scale-80.png">
+      <PackagePath>Assets\SmallLogo.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -145,6 +169,22 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\SplashScreen.scale-180.png">
       <PackagePath>Assets\SplashScreen.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Square70x70Logo.scale-100.png">
+      <PackagePath>Assets\Square70x70Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Square70x70Logo.scale-140.png">
+      <PackagePath>Assets\Square70x70Logo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Square70x70Logo.scale-180.png">
+      <PackagePath>Assets\Square70x70Logo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\Square70x70Logo.scale-80.png">
+      <PackagePath>Assets\Square70x70Logo.scale-80.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\StoreLogo.scale-100.png">
@@ -179,6 +219,22 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\question_mark.png">
       <PackagePath>Assets\question_mark.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\WideLogo.scale-100.png">
+      <PackagePath>Assets\WideLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\WideLogo.scale-140.png">
+      <PackagePath>Assets\WideLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\WideLogo.scale-180.png">
+      <PackagePath>Assets\WideLogo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\Assets\WideLogo.scale-80.png">
+      <PackagePath>Assets\WideLogo.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ross Byrne\Documents\GitHub\Memory\Memory\Memory.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
